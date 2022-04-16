@@ -1,0 +1,19 @@
+{
+  "name": "Eagle Description Maker",
+  "version": "1.0",
+  "description": "Builds Descritptions For Eagle Components",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "img/Bga.svg"
+    }
+  },"content_scripts": [
+  {
+    "matches": ["*://www.digikey.ca/*"],
+    "js": ["scripts/contentscript.js"]
+  }
+],
+
+  "manifest_version": 2
+}
